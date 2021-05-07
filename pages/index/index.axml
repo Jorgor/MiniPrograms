@@ -1,0 +1,32 @@
+<view class="page">
+  <view class="tips">请设置新支付密码，用于支付验证</view>
+  <view class="password-group">
+    <input focus="{{ start }}" maxlength="6" type="number" onInput="setPassword" value="{{ password }}" class="real-input {{ start ? 'opacity' : '' }}" onBlur="setFalse"/>
+    <!--<view class="cover"></view> -->
+    <view class="item" onTap="onFoucs">
+      <text a:if="{{ password[0] }}"></text>
+      <!--<input maxlength="1" password="true" value="{{password[0]}}"/> -->
+    </view>
+    <view class="item" onTap="onFoucs">
+      <text a:if="{{ password[1] }}"></text>
+      <!--<input maxlength="1" password="true" value="{{password[1]}}"/> -->
+    </view>
+    <view class="item" onTap="onFoucs">
+      <text a:if="{{ password[2] }}"></text>
+      <!--<input maxlength="1" password="true" value="{{password[2]}}"/> -->
+    </view>
+    <view class="item" onTap="onFoucs">
+      <text a:if="{{ password[3] }}"></text>
+      <!--<input maxlength="1" password="true" value="{{password[3]}}"/> -->
+    </view>
+    <view class="item" onTap="onFoucs">
+      <text a:if="{{ password[4] }}"></text>
+      <!--<input maxlength="1" password="true" value="{{password[4]}}"/> -->
+    </view>
+    <view class="item" onTap="onFoucs">
+      <text a:if="{{ password[5] }}"></text>
+      <!--<input maxlength="1" password="true" value="{{password[5]}}"/> -->
+    </view>
+  </view>
+  <view class="confirm {{ password.length > 5  &&  !disable ? 'active' : '' }}" onTap="{{ password.length > 5  &&  !disable  ? 'submit' : '' }}">确认</view>
+</view>
